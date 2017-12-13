@@ -106,7 +106,7 @@ class MessageBox(BasicEffect):
         self._history = deque(maxlen=10)
         self.block = False
         self.current_message = None
-        return super().__init__(**kwargs)
+        return super().__init__(screen, **kwargs)
 
     def update(self, frame_no):
         num = len(self.messages)
@@ -150,7 +150,7 @@ class StatusBar(BasicEffect):
         self._screen = screen
         self._top_left = top_left
         self._player = player
-        return super().__init__(**kwargs)
+        return super().__init__(screen, **kwargs)
 
     def reset(self):
         for row in range(2):
@@ -210,7 +210,7 @@ class MapBox(BasicEffect):
         self._screen = screen
         self._top_left = top_left
         self.game = game
-        return super().__init__(**kwargs)
+        return super().__init__(screen, **kwargs)
 
     def update(self, frame_no):
         self.draw_level()

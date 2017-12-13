@@ -6,7 +6,8 @@ This module contains a decorator that will validate input to functions/methods.
 from functools import wraps
 from typing import Dict
 
-from cerberus import Validator, ValidationError
+from cerberus import Validator
+from cerberus.errors import ValidationError
 
 def validate(schema: Dict):
     """ Validation decorator. 

@@ -2,7 +2,7 @@ from collections import namedtuple
 import gettext
 
 from typing import Tuple, List
-from cerberus import ValidationError
+from cerberus.errors import ValidationError
 
 from helpers.validation import validate
 from models.direction import Direction
