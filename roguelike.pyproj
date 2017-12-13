@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2f518b0c-143f-4d13-94a4-c565f3e6261a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>roguelike.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>roguelike</Name>
+    <RootNamespace>roguelike</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="helpers\commands.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="helpers\i18n.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="helpers\skills.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="helpers\validation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="helpers\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\direction.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\game.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\items.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\level.py" />
+    <Compile Include="models\player.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\position.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rnd\dice.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rnd\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="roguelike.py" />
+    <Compile Include="ui\text_interface.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ui\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="helpers\" />
+    <Folder Include="models\" />
+    <Folder Include="rnd\" />
+    <Folder Include="ui\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

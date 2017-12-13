@@ -1,0 +1,2 @@
+class EmptyInventoryException(BaseException):
+    pass
