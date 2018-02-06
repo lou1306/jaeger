@@ -68,10 +68,7 @@ class SquareStore(dict):
 
     def get_random_walkable(self) -> Position:
         """Returns a random Position mapped to a walkable Square."""
-        pos = choice(list(self))
-        while not self[pos].is_walkable:
-            pos = choice(list(self))
-        return pos
+        return choice([i for i in self if self[i].is_walkable])
     
 class Room(SquareStore):
     """A room."""
